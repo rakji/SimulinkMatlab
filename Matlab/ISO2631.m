@@ -1,5 +1,5 @@
 function filtered=ISO2631(signal,type,fs)
-%--------------------------------------------------------------------------
+%-------------------------------------------------------------------------
 %This function calculate frequency weights according to ISO 2631-1
 %and return the frequency weighted accelerations.
 %SIGNAL is the acceleration vector(n*1 vector).
@@ -93,7 +93,7 @@ switch type
     numfl= [0 0 1];
     denfl =[a sqrt(2)/w2 1];
     % band pass filter
-    %numfh - числител на филтъра denf - знаменател
+    %numfh - Г·ГЁГ±Г«ГЁГІГҐГ« Г­Г  ГґГЁГ«ГІГєГ°Г  denf - Г§Г­Г Г¬ГҐГ­Г ГІГҐГ«
     % It is the product of low and high pass filter transfer functions
     numf = conv(numfh,numfl); %build the complete filter by convolution of the both filters
     denf = conv(denfh,denfl);
